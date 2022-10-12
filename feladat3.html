@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        .container{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container border ">
+        <div class="row mb-2 ">
+            <p class="mb-2">Egyszerű számológép</p>
+            <input type="number" name="" id="szam1">
+        </div>
+        <div class="row mb-2">
+            <input type="number" name="" id="szam2">
+        </div>
+        <div class="row mb-2">
+            <input type="text" name="" id="eredmeny">
+        </div>
+        <div class="row">
+            <button onclick="szamol(this)" class="btn btn-primary mr-2" id="osszead">+</button>
+            <button onclick="szamol(this)" class="btn btn-primary mr-2" id="kivon">-</button >
+            <button onclick="szamol(this)" class="btn btn-primary mr-2" id="oszt">/</button>
+            <button onclick="szamol(this)" class="btn btn-primary mr-2" id="szoroz">*</button>
+            
+        </div>
+    </div>
+
+    <script>
+        function szamol(obj){
+            if(obj.id=="osszead"){
+                document.getElementById('eredmeny').value=(+document.getElementById('szam1').value)+(+document.getElementById('szam2').value)
+            }
+            if(obj.id=="kivon"){
+                document.getElementById('eredmeny').value=(+document.getElementById('szam1').value)-(+document.getElementById('szam2').value)
+            }
+            if(obj.id=="oszt"){
+                document.getElementById('eredmeny').value=(+document.getElementById('szam1').value)/(+document.getElementById('szam2').value)
+            }
+            if(obj.id=="szoroz"){
+                document.getElementById('eredmeny').value=(+document.getElementById('szam1').value)*(+document.getElementById('szam2').value)
+            }
+
+        }
+    </script>
+</body>
+</html>

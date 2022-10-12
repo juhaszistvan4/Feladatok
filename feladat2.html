@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="szelesseg" placeholder="szélesség">
+    <br>
+    <input type="number" name="" id="magassag" placeholder="magasság">
+    <br>
+    <input type="button" value="Számol" onclick="szamol()">
+    <br>
+    <p></p>
+
+    <script>
+        function szamol(){
+            document.querySelector('p').textContent=`Terület: ${document.getElementById('szelesseg').value*document.getElementById('magassag').value} 
+            Kerület: ${document.getElementById('szelesseg').value*2+document.getElementById('magassag').value*2}`
+        }
+    </script>
+</body>
+</html>
